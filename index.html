@@ -3,74 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>簡易計算機</title>
+<title>工程科學個人網站</title>
 <style>
     body {
         font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
     }
-    .calculator {
-        width: 300px;
-        margin: 50px auto;
+    header {
+        background-color: #333;
+        color: #fff;
         padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #f9f9f9;
+        text-align: center;
     }
-    input[type="text"] {
+    nav {
+        background-color: #444;
+        padding: 10px;
+        text-align: center;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+    }
+    nav a:hover {
+        background-color: #555;
+    }
+    section {
+        padding: 20px;
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
         width: 100%;
-        margin-bottom: 10px;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-    input[type="button"] {
-        width: 48%;
-        padding: 10px;
-        margin-right: 2%;
-        margin-bottom: 10px;
-        box-sizing: border-box;
-        cursor: pointer;
-    }
-    input[type="button"]:last-child {
-        margin-right: 0;
     }
 </style>
 </head>
 <body>
 
-<div class="calculator">
-    <input type="text" id="display" readonly>
-    <input type="button" value="1" onclick="appendToDisplay('1')">
-    <input type="button" value="2" onclick="appendToDisplay('2')">
-    <input type="button" value="3" onclick="appendToDisplay('3')">
-    <input type="button" value="+" onclick="appendToDisplay('+')">
-    <input type="button" value="4" onclick="appendToDisplay('4')">
-    <input type="button" value="5" onclick="appendToDisplay('5')">
-    <input type="button" value="6" onclick="appendToDisplay('6')">
-    <input type="button" value="-" onclick="appendToDisplay('-')">
-    <input type="button" value="7" onclick="appendToDisplay('7')">
-    <input type="button" value="8" onclick="appendToDisplay('8')">
-    <input type="button" value="9" onclick="appendToDisplay('9')">
-    <input type="button" value="*" onclick="appendToDisplay('*')">
-    <input type="button" value="C" onclick="clearDisplay()">
-    <input type="button" value="0" onclick="appendToDisplay('0')">
-    <input type="button" value="=" onclick="calculate()">
-    <input type="button" value="/" onclick="appendToDisplay('/')">
-</div>
+<header>
+    <h1>工程科學個人網站</h1>
+</header>
 
-<script>
-    function appendToDisplay(value) {
-        document.getElementById('display').value += value;
-    }
+<nav>
+    <a href="#about">關於我</a>
+    <a href="#projects">專案</a>
+    <a href="#contact">聯絡我</a>
+</nav>
 
-    function clearDisplay() {
-        document.getElementById('display').value = '';
-    }
+<section id="about">
+    <h2>關於我</h2>
+    <p>在這裡寫一些關於你的資訊，例如你的教育背景、專業技能等。</p>
+</section>
 
-    function calculate() {
-        var result = eval(document.getElementById('display').value);
-        document.getElementById('display').value = result;
-    }
-</script>
+<section id="projects">
+    <h2>專案</h2>
+    <p>列出你參與過的一些專案或者工程案例，並寫一些描述。</p>
+</section>
+
+<section id="contact">
+    <h2>聯絡我</h2>
+    <p>你可以在這裡提供聯絡方式，例如電子郵件地址或者社交媒體連結。</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 工程科學個人網站 | Designed by Your Name</p>
+</footer>
 
 </body>
 </html>
